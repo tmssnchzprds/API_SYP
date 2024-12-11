@@ -1,0 +1,20 @@
+﻿{
+  "UiPath.UIAutomationNext.Activities.Generic.CaptureScreenshots": "True",
+  "UiPath.UIAutomationNext.Activities.Generic.EnableJavaForCrossPlatform": "False",
+  "UiPath.UIAutomationNext.Activities.Generic.EnableAutoAddToOR": "True",
+  "UiPath.UIAutomationNext.Activities.SearchStepsWeb.EdgeInteractionMode": "DebuggerApi",
+  "UiPath.UIAutomationNext.Activities.SearchStepsWeb.FullSelector": "False",
+  "UiPath.UIAutomationNext.Activities.SearchStepsWeb.FuzzySelector": "True",
+  "UiPath.UIAutomationNext.Activities.SearchStepsWeb.ComputerVision": "True",
+  "UiPath.UIAutomationNext.Activities.SearchStepsWeb.IgnoreSelectorsWithIdx": "True",
+  "UiPath.UIAutomationNext.Activities.SearchStepsSAP.InteractionMode": "Simulate",
+  "UiPath.UIAutomationNext.Activities.SearchStepsSAP.FullSelector": "True",
+  "UiPath.UIAutomationNext.Activities.SearchStepsSAP.FuzzySelector": "False",
+  "UiPath.UIAutomationNext.Activities.SearchStepsSAP.ComputerVision": "False",
+  "UiPath.UIAutomationNext.Activities.SearchStepsSAP.IgnoreSelectorsWithIdx": "True",
+  "UiPath.UIAutomationNext.Activities.SearchStepsJava.InteractionMode": "Simulate",
+  "UiPath.UIAutomationNext.Activities.SearchStepsJava.FullSelector": "True",
+  "UiPath.UIAutomationNext.Activities.SearchStepsJava.FuzzySelector": "True",
+  "UiPath.UIAutomationNext.Activities.SearchStepsJava.ComputerVision": "True",
+  "UiPath.UIAutomationNext.Activities.SearchStepsJava.IgnoreSelectorsWithIdx": "True"
+}
