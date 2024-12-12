@@ -11,15 +11,16 @@ using ICSharpCode.SharpZipLib.GZip;
 
 namespace COM_SYP
 {
+    public enum Command
+    {
+        Nothing,
+        Help,
+        Compress,
+        Decompress
+    }
+
     public class GZipActivity : CodeActivity
     {
-        public enum Command
-        {
-            Nothing,
-            Help,
-            Compress,
-            Decompress
-        }
 
         [Category("Input")]
         [RequiredArgument]
