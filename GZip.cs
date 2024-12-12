@@ -9,7 +9,7 @@ using UiPath.Orchestrator.Client.Models;
 using System.IO;
 using ICSharpCode.SharpZipLib.GZip;
 
-namespace APP_SYP
+namespace COM_SYP
 {
     public class GZipActivity : CodeActivity
     {

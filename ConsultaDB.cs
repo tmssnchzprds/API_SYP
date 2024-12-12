@@ -8,7 +8,7 @@ using UiPath.Core.Activities.Storage;
 using UiPath.Orchestrator.Client.Models;
 using MySqlConnector;
 
-namespace APP_SYP
+namespace COM_SYP
 {
     public class ConsultaDB : CodeActivity
     {

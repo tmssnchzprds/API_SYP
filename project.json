@@ -1,5 +1,5 @@
 {
-  "name": "APP_SYP",
+  "name": "COM_SYP",
   "projectId": "bdff6ff2-04c5-4ca2-8295-0e7691631503",
   "description": "Biblioteca para conectar a bbdd de SYP y a TMDB",
   "main": "NewActivity.xaml",
