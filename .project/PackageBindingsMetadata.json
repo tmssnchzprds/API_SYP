@@ -606,34 +606,6 @@
         "SubBindings": [],
         "DefaultValueSource": "Property"
       }
-    ],
-    "UiPath.UIAutomationNext.Activities.NApplicationCard": [
-      {
-        "Type": "UIAConnection",
-        "PublishNullValues": false,
-        "Key": {
-          "Value": "ConnectionId",
-          "ValueSource": "Property"
-        },
-        "Values": {
-          "ConnectionId": {
-            "Value": "ConnectionId",
-            "ValueSource": "Property"
-          }
-        },
-        "Arguments": {
-          "ConnectionName": {
-            "Value": "ConnectionName",
-            "ValueSource": "Property"
-          },
-          "Connector": {
-            "Value": "z-uipath-browser",
-            "ValueSource": "Constant"
-          }
-        },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
-      }
     ]
   }
 }
