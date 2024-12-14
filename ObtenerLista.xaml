@@ -4,7 +4,9 @@
     <x:Property Name="inFile" Type="InArgument(x:String)" />
     <x:Property Name="vArrStr" Type="OutArgument(s:String[])" />
   </x:Members>
-  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -101,7 +103,7 @@
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ObtenerLista" sap:VirtualizedContainerService.HintSize="653.6000000000001,1069.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ObtenerLista" sap:VirtualizedContainerService.HintSize="613.6000000000001,1069.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="vStrJson" />
       <Variable x:TypeArguments="x:String" Name="vStrRuta" />
@@ -119,71 +121,17 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <uasf:DownloadFileFromUrl ResponseAttachment="{x:Null}" Timeout="{x:Null}" ConflictResolution="Rename" DisplayName="Download File from URL" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="DownloadFileFromUrl_1">
-            <uasf:DownloadFileFromUrl.FileName>
-              <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">inFile</CSharpValue>
-              </InArgument>
-            </uasf:DownloadFileFromUrl.FileName>
-            <uasf:DownloadFileFromUrl.Url>
-              <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">inURL+inFile</CSharpValue>
-              </InArgument>
-            </uasf:DownloadFileFromUrl.Url>
-          </uasf:DownloadFileFromUrl>
-          <c:GZipActivity CompressionLevel="9" DisplayName="G zip activity" sap:VirtualizedContainerService.HintSize="433.6,166.4" sap2010:WorkflowViewState.IdRef="GZipActivity_1">
-            <c:GZipActivity.CommandType>
-              <InArgument x:TypeArguments="c:Command">
-                <CSharpValue x:TypeArguments="c:Command" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">COM_SYP.Command.Decompress</CSharpValue>
-              </InArgument>
-            </c:GZipActivity.CommandType>
-            <c:GZipActivity.SourceFile>
-              <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">inFile</CSharpValue>
-              </InArgument>
-            </c:GZipActivity.SourceFile>
-            <c:GZipActivity.TargetFile>
-              <OutArgument x:TypeArguments="x:String">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">vStrRuta</CSharpReference>
-              </OutArgument>
-            </c:GZipActivity.TargetFile>
-          </c:GZipActivity>
-          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="433.6,112.8" sap2010:WorkflowViewState.IdRef="DeleteFileX_3">
-            <ui:DeleteFileX.Path>
-              <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">inFile</CSharpValue>
-              </InArgument>
-            </ui:DeleteFileX.Path>
-          </ui:DeleteFileX>
-          <ui:ReadTextFile File="{x:Null}" DisplayName="Read Text File" sap:VirtualizedContainerService.HintSize="433.6,112.8" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
-            <ui:ReadTextFile.Content>
-              <OutArgument x:TypeArguments="x:String">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">vStrJson</CSharpReference>
-              </OutArgument>
-            </ui:ReadTextFile.Content>
-            <ui:ReadTextFile.FileName>
-              <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">vStrRuta</CSharpValue>
-              </InArgument>
-            </ui:ReadTextFile.FileName>
-          </ui:ReadTextFile>
-          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="433.6,112.8" sap2010:WorkflowViewState.IdRef="DeleteFileX_2">
-            <ui:DeleteFileX.Path>
-              <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">vStrRuta</CSharpValue>
-              </InArgument>
-            </ui:DeleteFileX.Path>
-          </ui:DeleteFileX>
+          <uasf:DownloadFileFromUrl ResponseAttachment="{x:Null}" Timeout="{x:Null}" ConflictResolution="Rename" DisplayName="Download File from URL" FileName="[inFile]" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="DownloadFileFromUrl_1" Url="[inURL+inFile]" />
+          <c:GZipActivity CommandType="[COM_SYP.Command.Decompress]" CompressionLevel="9" DisplayName="G zip activity" sap:VirtualizedContainerService.HintSize="433.6,166.4" sap2010:WorkflowViewState.IdRef="GZipActivity_1" SourceFile="[inFile]" TargetFile="[vStrRuta]" />
+          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="433.6,112.8" sap2010:WorkflowViewState.IdRef="DeleteFileX_3" Path="[inFile]" />
+          <ui:ReadTextFile File="{x:Null}" Content="[vStrJson]" DisplayName="Read Text File" FileName="[vStrRuta]" sap:VirtualizedContainerService.HintSize="433.6,112.8" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="433.6,112.8" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[vStrRuta]" />
           <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_1">
             <Assign.To>
-              <OutArgument x:TypeArguments="s:String[]">
-                <CSharpReference x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">vArrStr</CSharpReference>
-              </OutArgument>
+              <OutArgument x:TypeArguments="s:String[]">[vArrStr]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="s:String[]">
-                <CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">Regex.Split(vStrJson, @"(?&lt;=\})\s*(?=\{)");</CSharpValue>
-              </InArgument>
+              <InArgument x:TypeArguments="s:String[]">[Regex.Split(vStrJson, "(?&lt;=\})\s*(?=\{)")]</InArgument>
             </Assign.Value>
           </Assign>
         </Sequence>
@@ -200,13 +148,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error">
-              <ui:LogMessage.Message>
-                <InArgument x:TypeArguments="x:Object">
-                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">"[ERROR] Error : ${exception.Message}"</CSharpValue>
-                </InArgument>
-              </ui:LogMessage.Message>
-            </ui:LogMessage>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;[ERROR] Error : &quot;+exception.Message]" />
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>

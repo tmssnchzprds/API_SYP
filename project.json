@@ -6,7 +6,7 @@
   "dependencies": {
     "COM_SYP": "1.1.1",
     "UiPath.System.Activities": "24.10.7",
-    "UiPath.WebAPI.Activities": "1.20.1"
+    "UiPath.WebAPI.Activities": "1.21.1"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -44,7 +44,7 @@
     "fileInfoCollection": [],
     "saveToCloud": false
   },
-  "expressionLanguage": "CSharp",
+  "expressionLanguage": "VisualBasic",
   "isTemplate": false,
   "templateProjectData": {},
   "publishData": {},
