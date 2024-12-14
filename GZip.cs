@@ -1,11 +1,6 @@
 using System;
 using System.Activities;
 using System.ComponentModel;
-using System.Collections.Generic;
-using System.Data;
-using UiPath.Core;
-using UiPath.Core.Activities.Storage;
-using UiPath.Orchestrator.Client.Models;
 using System.IO;
 using ICSharpCode.SharpZipLib.GZip;
 
@@ -13,8 +8,6 @@ namespace COM_SYP
 {
     public enum Command
     {
-        Nothing,
-        Help,
         Compress,
         Decompress
     }
