@@ -4,21 +4,21 @@
   "description": "Biblioteca para conectar a bbdd de SYP y a TMDB",
   "main": "NewActivity.xaml",
   "dependencies": {
-    "MySqlConnector": "[2.4.0]",
-    "SharpZipLib.NETStandard": "[1.0.7]",
-    "UiPath.System.Activities": "24.10.7"
+    "COM_SYP": "1.1.1",
+    "UiPath.System.Activities": "24.10.7",
+    "UiPath.WebAPI.Activities": "1.20.1"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.8.0",
-  "projectVersion": "1.0.2",
+  "projectVersion": "1.1.4",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
     "isPausable": true,
     "isAttended": false,
-    "requiresUserInteraction": false,
+    "requiresUserInteraction": true,
     "supportsPersistence": false,
     "workflowSerialization": "DataContract",
     "excludedLoggedData": [
@@ -48,5 +48,5 @@
   "isTemplate": false,
   "templateProjectData": {},
   "publishData": {},
-  "targetFramework": "Portable"
+  "targetFramework": "Windows"
 }
