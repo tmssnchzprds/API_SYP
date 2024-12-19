@@ -4,7 +4,7 @@
   "description": "Biblioteca para conectar a bbdd de SYP y a TMDB",
   "main": "NewActivity.xaml",
   "dependencies": {
-    "COM_SYP": "1.1.1",
+    "COM_SYP": "1.2.0",
     "UiPath.System.Activities": "24.10.7",
     "UiPath.WebAPI.Activities": "1.21.1"
   },
@@ -12,7 +12,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.8.0",
-  "projectVersion": "1.1.4",
+  "projectVersion": "1.2.6",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,

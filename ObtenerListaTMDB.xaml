@@ -1,12 +1,14 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CargarItemCola" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:COM_SYP;assembly=COM_SYP.Core" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uasf="clr-namespace:UiPath.Activities.System.FileOperations;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CargarItemCola" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:COM_SYP;assembly=COM_SYP.Core" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uasf="clr-namespace:UiPath.Activities.System.FileOperations;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="inURL" Type="InArgument(x:String)" />
     <x:Property Name="inFile" Type="InArgument(x:String)" />
-    <x:Property Name="vArrStr" Type="OutArgument(s:String[])" />
+    <x:Property Name="outArrStr" Type="OutArgument(s:String[])" />
+    <x:Property Name="outArrJSON" Type="OutArgument(njl:JArray)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
+  <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -45,6 +47,7 @@
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -101,9 +104,10 @@
       <AssemblyReference>Microsoft.Extensions.DependencyModel</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ObtenerLista" sap:VirtualizedContainerService.HintSize="613.6000000000001,1069.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ObtenerLista" sap:VirtualizedContainerService.HintSize="560.8000000000001,1069.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="vStrJson" />
       <Variable x:TypeArguments="x:String" Name="vStrRuta" />
@@ -128,10 +132,10 @@
           <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="433.6,112.8" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[vStrRuta]" />
           <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_1">
             <Assign.To>
-              <OutArgument x:TypeArguments="s:String[]">[vArrStr]</OutArgument>
+              <OutArgument x:TypeArguments="s:String[]">[outArrStr]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="s:String[]">[Regex.Split(vStrJson, "(?&lt;=\})\s*(?=\{)")]</InArgument>
+              <InArgument x:TypeArguments="s:String[]">[Regex.Split(vStrJson.Replace("'", ""), "(?&lt;=\})\s*(?=\{)")]</InArgument>
             </Assign.Value>
           </Assign>
         </Sequence>

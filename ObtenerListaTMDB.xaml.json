@@ -1,5 +1,5 @@
 {
-  "DisplayName": "ObtenerItem",
+  "DisplayName": "ObtenerListaTMDB",
   "Tooltip": null,
   "HelpLink": null,
   "Color": null,
@@ -11,15 +11,27 @@
       "Category": null,
       "Tooltip": null,
       "Placeholder": null,
-      "Widget": null,
+      "Widget": "TextComposer",
       "IsRequired": false,
       "IsPrincipal": true,
       "ArgumentType": 0,
       "DataSourceItems": null
     },
     {
-      "Name": "inID",
-      "DisplayName": "inID",
+      "Name": "inFile",
+      "DisplayName": "inFile",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "outArrStr",
+      "DisplayName": "outArrStr",
       "Category": null,
       "Tooltip": null,
       "Placeholder": null,
@@ -30,32 +42,8 @@
       "DataSourceItems": null
     },
     {
-      "Name": "inLanguage",
-      "DisplayName": "inLanguage",
-      "Category": null,
-      "Tooltip": null,
-      "Placeholder": null,
-      "Widget": null,
-      "IsRequired": false,
-      "IsPrincipal": true,
-      "ArgumentType": 0,
-      "DataSourceItems": null
-    },
-    {
-      "Name": "inKey",
-      "DisplayName": "inKey",
-      "Category": null,
-      "Tooltip": null,
-      "Placeholder": null,
-      "Widget": null,
-      "IsRequired": false,
-      "IsPrincipal": true,
-      "ArgumentType": 0,
-      "DataSourceItems": null
-    },
-    {
-      "Name": "outJson",
-      "DisplayName": "outJson",
+      "Name": "outArrJSON",
+      "DisplayName": "outArrJSON",
       "Category": null,
       "Tooltip": null,
       "Placeholder": null,
