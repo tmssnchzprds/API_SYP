@@ -54,8 +54,20 @@
       "DataSourceItems": null
     },
     {
-      "Name": "inSQL",
-      "DisplayName": "inSQL",
+      "Name": "inParameters",
+      "DisplayName": "inParameters",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "Dictionary",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "inSQLInsertar",
+      "DisplayName": "inSQLInsertar",
       "Category": null,
       "Tooltip": null,
       "Placeholder": null,
@@ -66,12 +78,12 @@
       "DataSourceItems": null
     },
     {
-      "Name": "inParameters",
-      "DisplayName": "inParameters",
+      "Name": "inSQLActualizar",
+      "DisplayName": "inSQLActualizar",
       "Category": null,
       "Tooltip": null,
       "Placeholder": null,
-      "Widget": null,
+      "Widget": "TextComposer",
       "IsRequired": false,
       "IsPrincipal": true,
       "ArgumentType": 0,
