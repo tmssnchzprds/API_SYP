@@ -109,7 +109,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="InsertarDB" sap:VirtualizedContainerService.HintSize="1213.6000000000001,3620" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="InsertarDB" sap:VirtualizedContainerService.HintSize="1213.6000000000001,3758.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="0" Name="vIntContIntentos" />
       <Variable x:TypeArguments="x:Int32" Default="3" Name="vIntMaxIntentos" />
@@ -120,9 +120,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[vIntContIntentos&lt;vIntMaxIntentos And vBoolIntentos]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="681.6,3596.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[vIntContIntentos&lt;vIntMaxIntentos And vBoolIntentos]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="681.6,3735.2" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
       <ui:InterruptibleDoWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="648,3459.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="648,3597.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -136,12 +136,12 @@
               <InArgument x:TypeArguments="x:Boolean">False</InArgument>
             </Assign.Value>
           </Assign>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="614.4,3285.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="614.4,3424" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <TryCatch.Try>
               <c:OperacionDB Result="{x:Null}" Database="[inDatabase]" DisplayName="Operacion DB" sap:VirtualizedContainerService.HintSize="334.4,348.8" sap2010:WorkflowViewState.IdRef="OperacionDB_1" Operacion="[COM_SYP.TipoOperacion.Insert]" Parameters="[inParameters]" Password="[inPassword]" Query="[inSQLInsertar]" Server="[inServer]" User="[inUser]" />
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:InvalidOperationException" sap:VirtualizedContainerService.HintSize="580.8,1776.8" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+              <Catch x:TypeArguments="s:InvalidOperationException" sap:VirtualizedContainerService.HintSize="580.8,1915.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -152,7 +152,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:InvalidOperationException" Name="exception" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="574.4,1705.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="574.4,1844" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -166,15 +166,15 @@
                         <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="540.8,1532" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="540.8,1670.4" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                       <TryCatch.Try>
                         <c:OperacionDB Result="{x:Null}" Database="[inDatabase]" DisplayName="Operacion DB" sap:VirtualizedContainerService.HintSize="334.4,348.8" sap2010:WorkflowViewState.IdRef="OperacionDB_2" Operacion="[COM_SYP.TipoOperacion.Update]" Parameters="[inParameters]" Password="[inPassword]" Query="[inSQLActualizar]" Server="[inServer]" User="[inUser]" />
                       </TryCatch.Try>
                       <TryCatch.Catches>
-                        <Catch x:TypeArguments="s:InvalidOperationException" sap:VirtualizedContainerService.HintSize="507.2,106.4" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                        <Catch x:TypeArguments="s:InvalidOperationException" sap:VirtualizedContainerService.HintSize="507.2,161.6" sap2010:WorkflowViewState.IdRef="Catch`1_4">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -182,7 +182,7 @@
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="s:InvalidOperationException" Name="exception" />
                             </ActivityAction.Argument>
-                            <Rethrow DisplayName="Arrojar de nuevo" sap:VirtualizedContainerService.HintSize="334.4,24.8" sap2010:WorkflowViewState.IdRef="Rethrow_6" />
+                            <Throw DisplayName="Lanzar excepción" Exception="[new BusinessRuleException(exception.Message)]" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
                           </ActivityAction>
                         </Catch>
                         <Catch x:TypeArguments="m:MySqlException" sap:VirtualizedContainerService.HintSize="507.2,718.4" sap2010:WorkflowViewState.IdRef="Catch`1_5">
@@ -236,7 +236,7 @@
                             </If>
                           </ActivityAction>
                         </Catch>
-                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="507.2,106.4" sap2010:WorkflowViewState.IdRef="Catch`1_6">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
